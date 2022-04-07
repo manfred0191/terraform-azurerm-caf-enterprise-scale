@@ -84,7 +84,7 @@ variable "settings" {
 variable "resource_prefix" {
   type        = string
   description = "If specified, will set the resource name prefix for management resources (default value determined from \"var.root_id\")."
-  default     = "rg"
+  default     = ""
 
   validation {
     condition     = can(regex("^[a-zA-Z0-9-]{2,10}$", var.resource_prefix)) || var.resource_prefix == ""
